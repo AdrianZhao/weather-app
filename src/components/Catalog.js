@@ -35,9 +35,34 @@ function Catalog() {
     const randomNum = Math.floor((Math.random() * ((max - min) + 1)) + min);
     return randomNum;
   }
+  const handleSort = (event) => {
+    event.preventDefault();
+    const sortedCity = [...city]; 
+    sortedCity.sort((a, b) => {
+      const nameA = a.name.toLowerCase().trim();
+      const nameB = b.name.toLowerCase().trim();
+      if (nameA < nameB) {
+        return -1; 
+      }
+      if (nameA > nameB) {
+        return 1; 
+      }
+      return 0; 
+    });
+  setCity(sortedCity); 
+  };
+  const handleNew = () => {
+    navigate(`/newform`);
+  }
   return (
     <>
       <h1 className='big-title'>Random City Listed Here</h1>
+      <form className='button-wrapper'>
+        <div>
+          <button type='sort' className= 'sort-button'  onClick={handleSort}>By Name</button>
+          <button className= 'sort-button'  onClick={handleNew}>New City</button>
+        </div>
+      </form>
       {wrapper}
     </>
   );

@@ -5,6 +5,7 @@ import Catalog from './components/Catalog';
 import Detail from './components/Detail';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
+import NewForm from './components/NewForm';
 function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/weather-app" element={<Catalog />}/>
             <Route exact path='/city/:cityname' element={<Detail />} />
             <Route exact path="*" element={<NotFound />} />
+            <Route exact path="/newform" element={<NewForm />}/>
           </Routes>
         </div>
       </main>

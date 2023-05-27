@@ -58,6 +58,55 @@ header {
   transition: 0.5s;
   cursor: pointer;
 }
+.flexbox ul li a {
+  text-decoration: none;
+}
+.button-wrapper {
+  margin-top: 3rem;
+
+}
+.sort-button {
+  user-select: none;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+.sort-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgb(193, 163, 98);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+.sort-button:hover::before {
+  scale: 3;
+}
+.sort-button:hover {
+  color: #fff;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+.sort-button:active {
+  scale: 1;
+}
+.sort-button + .sort-button {
+  margin-left: 3rem;
+}
 .big-title {
   font-size: 4rem;
   margin-top: 5rem;
@@ -130,4 +179,124 @@ header {
   text-align: center;
   font-size: 30rem;
   color: #fff;
+}
+.new-form {
+  margin-top: 10rem;
+  color: #fff;
+  font-size: 2rem;
+}
+.name-wrapper {
+  width: 30rem;
+  height: 11rem;
+}
+.name-wrapper input {
+  width: 100%;
+  height: 3rem;
+  font-size: 1.8rem;
+}
+.email-wrapper {
+  width: 30rem;
+  height: 11rem;
+}
+.email-wrapper input {
+  width: 100%;
+  height: 3rem;
+}
+.comment-wrapper {
+  height: 14rem;
+  width: 30rem;
+}
+.comment-wrapper textarea {
+  width: 100%;
+  resize: none;
+  height: 6rem;
+}
+.button {
+  margin-top: 5rem;
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #212121;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+.button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+  inset: 0;
+  scale: 0;
+  border-radius: inherit;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+.button span {
+  text-transform: uppercase;
+  transition: all 0.7s;
+  position: relative;
+  overflow: hidden;
+}
+.button span::before {
+  position: absolute;
+  content: 'Submit';
+  top: 0;
+  left: 0;
+  color: white;
+  width: 0;
+  overflow: hidden;
+}
+.button:hover span::before {
+  width: 100%;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transition-delay: 0.4s;
+}
+.button:hover::before {
+  scale: 1;
+}
+.button:active {
+  translate: 0 10px;
+}
+select::-ms-expand {
+  display: none;
+}
+.selectdiv:after {
+  content: '<>';
+  font: 17px "Consolas", monospace;
+  color: #333;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 11px;
+  top: 18px;
+  padding: 0 0 2px;
+  border-bottom: 1px solid #999;
+  position: absolute;
+  pointer-events: none;
+}
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 50px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
 }

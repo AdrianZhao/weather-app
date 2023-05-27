@@ -1,5 +1,5 @@
 import { Component } from 'react';
-
+import { Link } from "react-router-dom";
 class Header extends Component {
   render() {
     const { title } = this.props;
@@ -11,7 +11,7 @@ class Header extends Component {
             <h1>{title}</h1>
           </div>
           <ul>
-            <li><p>My Weather</p></li>
+            <li><Link to="/weather-app"><p>Homepage</p></Link></li>
             <li><p>List of Cities</p></li>
             <li><p>About Us</p></li>
             <li><p>Subscribe</p></li>
