@@ -78,8 +78,8 @@ function Catalog() {
     <>
       <h1 className='big-title'>Random City Listed Here</h1>
       <h2 className='title-detail'>
-        This page will generate 9 random real cities base on cities.json file.
-        If there are not enough 9 cities then google maps can't find the cities
+        This page will generate 10 random real cities base on cities.json file.
+        If there are not enough 10 cities then google maps can't find the cities
         with the name in json file.
       </h2>
       <form className='button-wrapper'>
